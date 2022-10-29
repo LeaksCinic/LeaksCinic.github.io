@@ -65,14 +65,14 @@
             //load Model from web //TODO Change to my 
             const loader = new THREE.GLTFLoader();
             let reticle;
-            loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/reticle/reticle.gltf", function (gltf) {
+            loader.load("/models/MotiusLogoSmall.gltf", function (gltf) {
                 reticle = gltf.scene;
                 reticle.visible = false;
                 scene.add(reticle);
             })
 
             let flower;
-            loader.load("/models/MotiusLogo.gltf", function (gltf) {
+            loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/sunflower/sunflower.gltf", function (gltf) {
                 flower = gltf.scene;
             });
 
