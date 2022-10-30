@@ -86,11 +86,11 @@
                 scene.add(reticle);
             })
 
-            let flower;
-            loader.load("/models/Characterwithoutanimation.gltf", function (gltf) {
-                flower = gltf.scene;
-                scene.add(flower);
-                mixer = new THREE.AnimationMixer(flower)
+            let avatar;
+            loader.load("/models/Characterwithanimation.gltf", function (gltf) {
+                avatar = gltf.scene;
+                scene.add(avatar);
+                mixer = new THREE.AnimationMixer(avatar)
                 clip = THREE.AnimationClip.findByName(clips, 'Action.002');
                 action = mixer.clipAction(clip);
                 action.play();
@@ -100,8 +100,8 @@
 
             //listener for primary action: tip on screen
             session.addEventListener("select", (event) => {
-                /*if (flower) {
-                    const clone = flower.clone();
+                /*if (avatar) {
+                    const clone = avatar.clone();
                     
                     clone.position.copy(reticle.position);
                     const vec = new THREE.Vector3();
