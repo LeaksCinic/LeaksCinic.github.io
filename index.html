@@ -102,7 +102,7 @@
 
             //listener for primary action: tip on screen
             session.addEventListener("select", (event) => {
-                /*if (avatar) {
+                if (avatar) {
                     const clone = avatar.clone();
                     
                     clone.position.copy(reticle.position);
@@ -114,7 +114,7 @@
                     clone.rotation.set(0, - clone.rotation.y, 0);
                     
                     scene.add(clone);
-                }*/
+                }
             });
 
             // Create a render loop that allows us to draw on the AR view.
