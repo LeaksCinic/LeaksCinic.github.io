@@ -86,16 +86,16 @@
                 scene.add(reticle);
             })
 
-            let flower;
+            let character;
             loader.load("/models/Characterwithanimation.gltf", function (gltf) {
-                flower = gltf.scene;
+                character = gltf.scene;
             });
 
 
             //listener for primary action: tip on screen
             session.addEventListener("select", (event) => {
-                if (flower) {
-                    const clone = flower.clone();
+                if (character) {
+                    const clone = character.clone();
                     clone.position.copy(reticle.position);
                     scene.add(clone);
                 }
@@ -131,6 +131,13 @@
                         reticle.visible = true;
                         reticle.position.set(hitPose.transform.position.x, hitPose.transform.position.y, hitPose.transform.position.z)
                         reticle.updateMatrixWorld(true);
+                        
+                        /* const vec = new THREE.Vector3();
+                        camera.getWorldDirection( vec );
+                        vec.y = 0;
+                        vec.add( reticle.position );
+                        reticle.lookAt( vec );*/
+
                     }
 
                     // Render the scene with THREE.WebGLRenderer.
