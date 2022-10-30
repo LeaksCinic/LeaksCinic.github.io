@@ -89,14 +89,6 @@
             let avatar;
             loader.load("/models/CharCube.gltf", function (gltf) {
                 avatar = gltf.scene;
-                scene.add(avatar);
-
-                mixer = new THREE.AnimationMixer( avatar );
-        
-                avatar.animations.forEach( ( clip ) => {
-          
-                mixer.clipAction( clip ).play();
-                });
             });
 
 
