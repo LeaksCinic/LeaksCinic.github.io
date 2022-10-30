@@ -155,10 +155,14 @@
                         reticle.lookAt( vec );
                         reticle.rotation.set(0,-reticle.rotation.y,0);
 
+                    
+
                     }
 
                     // Render the scene with THREE.WebGLRenderer.
-                    renderer.render(scene, camera)
+                    requestAnimationFrame( animate );
+                    renderer.render(scene, camera);
+                   
                 }
             }
             session.requestAnimationFrame(onXRFrame);
