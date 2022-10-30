@@ -97,6 +97,11 @@
                 if (flower) {
                     const clone = flower.clone();
                     clone.position.copy(reticle.position);
+                    const vec = new THREE.Vector3();
+                    camera.getWorldDirection( vec );
+                    vec.y = 0;
+                    vec.add( clone.position );
+                    clone.lookAt( vec );
                     scene.add(clone);
                 }
             });
