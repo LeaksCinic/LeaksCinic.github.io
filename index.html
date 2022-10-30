@@ -89,15 +89,13 @@
             let avatar;
             loader.load("/models/Characterwithoutanimation.gltf", function (gltf) {
                 avatar = gltf.scene;
-                
-                const anim = new FBXLoader();
-                anim.load("/models/Waving.fbx", (anim) => {
-                    this._mixer = new THREE.AnimationMixer(avatar);
-                    const idle = this._mixer.clipAciton(anim.animations[0]);
-                    idle.play();
-                });
-
                 scene.add(avatar);
+
+                mixer = new THREE.AnimationMixer( avatar );
+        
+                avatar.animations.forEach( ( clip ) => {
+          
+                mixer.clipAction( clip ).play();
             });
 
 
