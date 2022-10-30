@@ -87,14 +87,16 @@
             })
 
             let avatar;
-            loader.load("/models/Characterwithanimation.gltf", function (gltf) {
+            loader.load("/models/Characterwithoutanimation.gltf", function (gltf) {
                 avatar = gltf.scene;
-                scene.add(avatar);
+                
                 mixer = new THREE.AnimationMixer(avatar)
                 clip = THREE.AnimationClip.findByName(clips, 'Action.002');
                 action = mixer.clipAction(clip);
                 action.play();
                 mixers.push(mixer);
+
+                scene.add(avatar);
             });
 
 
