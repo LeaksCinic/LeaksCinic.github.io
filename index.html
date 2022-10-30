@@ -101,7 +101,8 @@
                     camera.getWorldDirection( vec );
                     vec.y = 0;
                     vec.add( clone.position );
-                    clone.lookAt( - vec );
+                    clone.lookAt( vec );
+                    clone.rotation.set(0,Math.PI,0)
                     scene.add(clone);
                 }
             });
@@ -141,7 +142,8 @@
                         camera.getWorldDirection( vec );
                         vec.y = 0;
                         vec.add( reticle.position );
-                        reticle.lookAt( - vec );
+                        reticle.lookAt( vec );
+                        reticle.rotation.set(0,Math.PI,0)
 
                     }
 
