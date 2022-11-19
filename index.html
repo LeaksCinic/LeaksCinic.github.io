@@ -80,14 +80,14 @@
             //load Model
             const loader = new THREE.GLTFLoader();
             let reticle;
-            loader.load("/models/MotiusLogoSmall.gltf", function (gltf) {
+            loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/reticle/reticle.gltf", function (gltf) {
                 reticle = gltf.scene;
                 reticle.visible = false;
                 scene.add(reticle);
             })
 
             let avatar;
-            loader.load("/models/CharCube2.gltf", function (gltf) {
+            loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/sunflower/sunflower.gltf", function (gltf) {
                 avatar = gltf.scene;
                 avatar.scale.multiplyScalar(0.2); 
             });
