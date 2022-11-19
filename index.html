@@ -80,7 +80,7 @@
             //load Model
             const loader = new THREE.GLTFLoader();
             let reticle;
-            loader.load("/models/Reticle_Usa1_1.gltf", function (gltf) {
+            loader.load("/models/Reticle_Usa1_2.gltf", function (gltf) {
                 reticle = gltf.scene;
                 reticle.visible = false;
                 scene.add(reticle);
@@ -89,7 +89,7 @@
             let avatar;
             loader.load("/models/CharacterUsaneer_1.gltf", function (gltf) {
                 avatar = gltf.scene;
-                avatar.scale.multiplyScalar(0.2); 
+                avatar.scale.multiplyScalar(0.33); 
             });
 
 
