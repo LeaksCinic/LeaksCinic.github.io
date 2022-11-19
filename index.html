@@ -80,7 +80,7 @@
             //load Model
             const loader = new THREE.GLTFLoader();
             let reticle;
-            loader.load("https://immersive-web.github.io/webxr-samples/media/gltf/reticle/reticle.gltf", function (gltf) {
+            loader.load("/models/Reticle_Usa1.gltf", function (gltf) {
                 reticle = gltf.scene;
                 reticle.visible = false;
                 scene.add(reticle);
